@@ -1,0 +1,12 @@
+<p> Utilizar jquery dentro de angular</p>
+<button id="botonjq">Mostrar text</button>
+<p id="textojq" class="alert alert-warning">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor, sapien ac molestie consequat, ipsum elit aliquam magna, eu cursus ipsum justo nec erat.
+</p>
+<hr>
+<h1>{{ titulo }}</h1>
+<simple-tiny
+  [elementId]="'my-editor-id'"
+  (onEditorKeyup)="textBoxEditor($event)"
+>
+</simple-tiny>
