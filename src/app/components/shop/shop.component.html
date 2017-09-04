@@ -1,3 +1,22 @@
+<div class="col-lg-12" [@fadeIn]>
+
+<a class="btn-active btn btn-success"
+   [@mark]="status"
+   (click)="changeState(status)">
+    <span *ngIf="status == 'inactive'"> Inactive </span>
+    <span *ngIf="status == 'active'"> Active </span>
+</a>
+
+<br>
+
+<h4>Animations css 3</h4>
+<a class="btn btn-transition">Transitionnpm start</a>
+
+<div class="clearfix"></div>
+<div class="animation-box"></div>
+
+
+<hr>
 <p> Utilizar jquery dentro de angular</p>
 <button id="botonjq">Mostrar text</button>
 <p id="textojq" class="alert alert-warning">
@@ -10,3 +29,4 @@
   (onEditorKeyup)="textBoxEditor($event)"
 >
 </simple-tiny>
+</div>

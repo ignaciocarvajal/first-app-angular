@@ -1,0 +1,72 @@
+h1 {
+  color:blue
+}
+
+body {
+  background-color: aquamarine;
+}
+
+
+.btn-transition{
+  padding: 10px;
+  background: rebeccapurple;
+  color: white;
+  border: 1px solid  #dbdbdb;
+  border-radius: 15px;
+  transition: border 2s, border-radius 500ms, background 5s;
+  display: block;
+  width: 200px;
+}
+
+.btn-transition:hover{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #c09853;
+  border: 1px solid red;
+}
+
+.animation-box{
+  margin-top: 25px;
+  background: green;
+  border: 5px solid black;
+  width: 500px;
+  height: 500px;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+/*@keyframes forma linealW*/
+/*@keyframes slide {
+  from {
+    margin-left: 0px;
+  }
+  to{
+    margin-left: 400px;
+    background: orange;
+  }
+}*/
+
+/*@keyframes porcentual*/
+@keyframes slide {
+  5% {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  25%{
+    margin-left: 400px;
+    background: orange;
+    border-radius: 100%;
+  }
+  75%{
+    transform: rotate(360deg);
+    margin-left: 0px;
+    background: red;
+    border-radius: 0px;
+  }
+  100%{
+    background: yellow;
+  }
+}

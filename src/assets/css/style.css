@@ -11,3 +11,9 @@
 .navbar-nav .active-nav{
   border-bottom: 3px solid orange;
 }
+
+
+.navbar-default .navbar-nav>li>a:hover{
+  border-bottom: 3px solid orange;
+  transition: all 3ms;
+}

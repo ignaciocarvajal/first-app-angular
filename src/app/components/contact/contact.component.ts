@@ -1,10 +1,12 @@
 import { Component, OnInit,  } from '@angular/core';
+import { fadeIn} from '../animation/animation.component';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html'
+  templateUrl: './contact.component.html',
+  animations: [ fadeIn ]
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit {
   title = 'Contact';
   contactMail: string;
 
