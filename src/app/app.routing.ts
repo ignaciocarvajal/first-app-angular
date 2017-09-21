@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { ContactComponent} from './components/contact/contact.component';
 import { AnimalsComponent} from './components/animals/animals.component';
+import { LoginComponent} from './components/login/login.component';
+import { RegisterComponent} from './components/register/register.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +19,8 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'keepers', component: KeepersComponent},
   {path: 'shop', component: ShopComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'sign-in', component: RegisterComponent},
   {path: '**', component: HomeComponent}
 ];
 
