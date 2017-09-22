@@ -10,6 +10,7 @@ import { ContactComponent} from './components/contact/contact.component';
 import { AnimalsComponent} from './components/animals/animals.component';
 import { LoginComponent} from './components/login/login.component';
 import { RegisterComponent} from './components/register/register.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   {path: 'shop', component: ShopComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-in', component: RegisterComponent},
+  {path: 'my-information', component: UserEditComponent},
   {path: '**', component: HomeComponent}
 ];
 

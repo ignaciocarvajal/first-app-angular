@@ -1,0 +1,39 @@
+<div class="col-lg-6">
+  <h1>{{ title }}</h1>
+
+  <div class="alert alert-success" *ngIf="status === 'success'">
+    You information updated success.
+  </div>
+  <div class="alert alert-danger" *ngIf="status === 'error'">
+    Error, you information no updated.
+  </div>
+
+  <form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
+    <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required>
+      <span *ngIf="!name.valid && name.touched" class="alert-warning">
+        the field name is required
+      </span>
+    </p>
+    <p>
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname" #surname="ngModel" [(ngModel)]="user.surname" class="form-control" required>
+      <span *ngIf="!surname.valid && surname.touched" class="alert-warning">
+        the field surname is required
+      </span>
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required>
+      <span *ngIf="!email.valid && email.touched" class="alert-warning">
+        the field email is required
+      </span>
+    </p>
+    <p>
+      <label for="avatar">upload avatar</label>
+      <input type="file" id="avatar" placeholder="upload image" (change)="fileChangeEvent($event)" />
+    </p>
+    <input type="submit" value="update" class="btn btn-primary" [disabled]="!userEditForm.form.valid">
+  </form>
+</div>

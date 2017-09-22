@@ -37,7 +37,7 @@
             </a>
           </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
         <li>
           <a [routerLink]="['/sign-in']">
             <span class="glyphicon glyphicon-user"></span>
@@ -49,6 +49,29 @@
             <span class="glyphicon glyphicon-log-in"></span>
             Log in
           </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" *ngIf="identity">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {{identity.name}} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+
+              <a class="pointer" [routerLink]="['/my-information']">
+                <span class="glyphicon glyphicon-cog"></span>
+                My information
+              </a>
+            </li>
+            <li>
+
+              <a class="pointer" (click)="logout()">
+                <span class="glyphicon glyphicon-log-out"></span>
+                log out
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
