@@ -19,6 +19,7 @@ import { AnimalsComponent} from './components/animals/animals.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 
 
@@ -34,7 +35,8 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     SimpleTinyComponent,
     LoginComponent,
     RegisterComponent,
-    UserEditComponent
+    UserEditComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

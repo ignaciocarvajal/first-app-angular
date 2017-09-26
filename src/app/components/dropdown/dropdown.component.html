@@ -1,0 +1,21 @@
+<div class="col-lg-7">
+  <div class="col-lg-2 form-group">
+    <label for="month">Mes</label>
+    <select class="form-control" id="month" [(ngModel)]="selectedMonth.id">
+      <option *ngFor="let month of months" value= {{month.id}}>
+        {{month.name}}
+      </option>
+    </select>
+  </div>
+
+  <div class="col-lg-2 col-lg-offset-1 form-group">
+    <label for="year">Anho</label>
+    <select class="form-control" id="year" [(ngModel)]="selectedYear">
+      <option *ngFor="let year of years" value= {{year}}>
+        {{year}}
+      </option>
+    </select>
+  </div>
+
+  <button (click)="callApi()">show date</button>
+</div>

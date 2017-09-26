@@ -8,8 +8,14 @@ import { fadeIn} from '../animation/animation.component';
 })
 export class AnimalsComponent implements OnInit{
   title = 'Animals';
+  public month: string;
+  public  year: string;
 
   ngOnInit() {
     console.log('animals Component is loaded');
+  }
+
+  verDate(event) {
+    console.log(event);
   }
 }
